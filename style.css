@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-1: hsl(214, 17%, 51%);
+  --color-2: hsl(217, 19%, 35%);
+  --color-3: hsl(212, 23%, 69%);
+  --color-4: hsl(210, 46%, 95%);
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+.parent {
+  display: flex;
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 1px 1px 10px -6px black;
+  border-radius: 15px;
+  background: white;
+}
+.parent .img {
+  width: 40%;
+}
+.parent .img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.parent .data {
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.parent .data h2 {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: var(--color-2);
+  letter-spacing: 1px;
+}
+.parent .data p {
+  margin-bottom: 20px;
+  color: var(--color-3);
+  width: 90%;
+  line-height: 1.5;
+}
+.parent .data .share-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.parent .data .share-content img.avatar {
+  width: calc(100% / 10);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.parent .data .share-content .user-info h5 {
+  margin: 0 0 2px 0px;
+  color: var(--color-2);
+  letter-spacing: 1px;
+}
+.parent .data .share-content .user-info span {
+  color: var(--color-3);
+  font-size: 0.9em;
+}
+.parent .data .share-content .share-icons {
+  position: absolute;
+  right: 5px;
+}
+.parent .data .share-content .share-icons .toolkit {
+  position: absolute;
+  top: -70px;
+  left: -120%;
+  background: var(--color-2);
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  transform: translateX(-25%);
+  border-radius: 15px;
+}
+.parent .data .share-content .share-icons .toolkit::before {
+  content: "";
+  position: absolute;
+  bottom: -48%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  background: var(--color-2);
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+.parent .data .share-content .share-icons .toolkit span {
+  margin-right: 25px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  color: var(--color-3);
+  transition: 0.2s all ease-in;
+}
+.parent .data .share-content .share-icons .toolkit span:hover {
+  color: var(--color-4);
+}
+.parent .data .share-content .share-icons .toolkit img {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.parent .data .toolkit-mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-2);
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.parent .data .toolkit-mobile span {
+  margin-right: 25px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  color: var(--color-3);
+}
+.parent .data .toolkit-mobile img {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.parent .data .share-content .share-icons button {
+  border: none;
+  background: var(--color-4);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.parent .data .share-content .share-icons button:focus + img.share-img {
+  fill: #ecf2f8;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.display-non {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .parent {
+    flex-direction: column;
+    width: 70%;
+  }
+  .parent .img {
+    width: 100%;
+  }
+  .parent .img img {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+  .parent .data {
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+  .parent .data h2 {
+    font-size: 1em;
+    margin-bottom: 15px;
+    padding-inline: 15px;
+  }
+  .parent .data p {
+    font-size: 0.8em;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-inline: 15px;
+  }
+  .parent .data .share-content {
+    padding: 10px 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
